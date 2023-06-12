@@ -24,6 +24,11 @@ f = Fernet(key)
 current_directory = os.getcwd()
 folder_path = os.path.join(current_directory, 'files')
 print(folder_path)
+
+# encrypted klasörünü oluştur
+if not os.path.exists("encrypted"):
+    os.makedirs("encrypted")
+
 #Dosya adlarını al
 for filename in os.listdir(folder_path):
     file_path = os.path.join(folder_path, filename)

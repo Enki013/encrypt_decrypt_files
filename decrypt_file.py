@@ -17,6 +17,10 @@ current_directory = os.getcwd()
 folder = os.path.join(current_directory, 'encrypted')
 file_list = os.listdir(folder)
 
+# decrypted klasörünü oluştur
+if not os.path.exists("decrypted"):
+    os.makedirs("decrypted")
+
 # Dosyaları Şifresini Çöz
 f = Fernet(key)
 for filename in file_list:
